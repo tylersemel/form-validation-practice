@@ -1,3 +1,3 @@
-# template
+# Form Validation Practice
 
-Template repo using Webpack
+Repo for understanding form validation.
