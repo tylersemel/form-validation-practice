@@ -79,11 +79,12 @@ form {
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  position: relative;
 }
 
 .form-row label {
-  width: 110px;
+  width: 150px;
   text-align: right;
   padding-right: 20px;
 }
@@ -94,6 +95,27 @@ form {
   height: 25px;
 }
 
+input:focus,
+select:focus {
+  outline: none;
+}
+
+input:valid:required {
+  background-color: rgb(180, 255, 180);
+  border: 2px solid green;
+}
+
+input:valid,
+input:invalid:focus {
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+}
+
+input:invalid {
+  border: 2px dashed red;
+  background-color: rgb(248, 180, 180);
+}
+
 button[type='submit'] {
   padding: 1px 10px;
   border: none;
@@ -102,27 +124,22 @@ button[type='submit'] {
   cursor: pointer;
 }
 
-.form-row input:invalid {
-  border: 2px solid rgb(167, 0, 0);
-}
-
 .error {
-  
+  position: absolute;
   padding: 0;
-  width: 150px;
+  text-align: left;
+  top: 25px;
+  left: 150px;
 
   border-radius: 10px;
-  margin-left: 120px;
-  /* margin-left: 5px; */
-  margin-top: 10px;
 
   font-size: 80%;
   color: white;
   background-color: #900;
-  /* border-radius: 0 0 5px 5px; */
+  border-radius: 0 0 5px 5px;
   box-sizing: border-box;
 }
 
 .error.active {
-  padding: 0.3rem;
+  padding: 0.1rem 0.3rem;
 }
